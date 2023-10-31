@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Your App Name</string>
+
+    <string-array name="roles_array">
+        <item>Donor</item>
+        <item>Recipient</item>
+    </string-array>
+</resources>

@@ -1,0 +1,8 @@
+<!-- File: res/drawable/spinner_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#000000"/>
+        </shape>
+    </item>
+</selector>

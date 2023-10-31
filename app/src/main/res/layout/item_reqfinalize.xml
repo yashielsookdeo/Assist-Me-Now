@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="8dp">
+
+    <!-- Icon Placeholder -->
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <!-- Item Name and Description -->
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingStart="8dp"
+        android:textSize="18sp"/>
+
+    <!-- Arrow Icon Placeholder -->
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="Remove"
+        android:textSize="10dp" />
+    />
+
+
+</LinearLayout>
