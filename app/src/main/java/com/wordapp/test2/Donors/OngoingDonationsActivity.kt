@@ -1,4 +1,4 @@
-package com.wordapp.test2
+package com.wordapp.test2.Donors
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.wordapp.test2.R
 
 class OngoingDonationsActivity : AppCompatActivity() {
 
@@ -23,7 +24,7 @@ class OngoingDonationsActivity : AppCompatActivity() {
             .child(FirebaseAuth.getInstance().currentUser?.uid ?: return)
             .child("finalizedDonations")
 
-        setupRecyclerView()  // Call this method to set up the RecyclerView
+        setupRecyclerView()
     }
 
     private fun setupRecyclerView() {
@@ -32,19 +33,18 @@ class OngoingDonationsActivity : AppCompatActivity() {
 
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val requestsList = mutableListOf<Request>()
-                for (requestSnapshot in dataSnapshot.children) {
-                    val itemsList = mutableListOf<RecipientActivity.RequestItem>()
-                    for (itemSnapshot in requestSnapshot.children) {
-                        val item = itemSnapshot.getValue(RecipientActivity.RequestItem::class.java)
-                        if (item != null) {
-                            itemsList.add(item)
-                        }
+                val donationsList = mutableListOf<Donation>()
+                for (donationSnapshot in dataSnapshot.children) {
+                    val itemsMap = mutableMapOf<String, Long>()
+                    for (itemSnapshot in donationSnapshot.children) {
+                        val itemName = itemSnapshot.key ?: continue
+                        val itemQuantity = itemSnapshot.value as? Long ?: continue
+                        itemsMap[itemName] = itemQuantity
                     }
-                    val request = Request(id = requestSnapshot.key ?: "", items = itemsList)
-                    requestsList.add(request)
+                    val donation = Donation(id = donationSnapshot.key ?: "", items = itemsMap)
+                    donationsList.add(donation)
                 }
-                recyclerView.adapter = RequestsAdapter(requestsList)
+                recyclerView.adapter = DonationsAdapter(donationsList)
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
@@ -53,28 +53,27 @@ class OngoingDonationsActivity : AppCompatActivity() {
         })
     }
 
-    data class Request(
+    data class Donation(
         val id: String = "",
-        val items: List<RecipientActivity.RequestItem> = listOf()
+        val items: Map<String, Long> = mapOf()
     )
 
-    inner class RequestsAdapter(private val requests: List<Request>) : RecyclerView.Adapter<RequestsAdapter.ViewHolder>() {
+    inner class DonationsAdapter(private val donations: List<Donation>) : RecyclerView.Adapter<DonationsAdapter.ViewHolder>() {
 
         inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val itemName: TextView = view.findViewById(R.id.item_name)  // Assuming each item has a name to be displayed
+            val itemName: TextView = view.findViewById(R.id.item_name)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.ongoingreqview, parent, false)
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.ongoingdonview, parent, false)
             return ViewHolder(view)
         }
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val request = requests[position]
-            // Assuming each item has a name to be displayed
-            holder.itemName.text = request.items.joinToString(", ") { it.name }
+            val donation = donations[position]
+            holder.itemName.text = donation.items.entries.joinToString { "${it.key}: ${it.value}" }
         }
 
-        override fun getItemCount() = requests.size
+        override fun getItemCount() = donations.size
     }
 }

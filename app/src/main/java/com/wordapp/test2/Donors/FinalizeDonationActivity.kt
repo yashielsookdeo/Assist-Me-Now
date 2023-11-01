@@ -1,5 +1,6 @@
 package com.wordapp.test2.Donors
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -52,6 +53,9 @@ class FinalizeDonationActivity : AppCompatActivity() {
                                     "Donation finalized successfully.",
                                     Toast.LENGTH_SHORT
                                 ).show()
+                                val intent = Intent(this, OngoingDonationsActivity::class.java)
+                                startActivity(intent)
+
                             }.addOnFailureListener {
                                 Toast.makeText(
                                     this,
