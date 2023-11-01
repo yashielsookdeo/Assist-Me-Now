@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Donors.DonorActivity">
 
     <LinearLayout
@@ -16,8 +17,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="FOOD"
-            android:textSize="20sp"
+            android:text="Categories"
+            android:textSize="24dp"
+
             android:textColor="#000000" />
 
         <!-- View All Button -->
@@ -25,7 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="View all"
-            android:layout_gravity="end" />
+            android:layout_gravity="end"
+            android:background="@drawable/rounded_corner"/>
 
         <!-- RecyclerView for List of Items -->
         <androidx.recyclerview.widget.RecyclerView
@@ -40,7 +43,8 @@
             android:layout_height="wrap_content"
             android:text="Finalize Donation"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"/>
 
     </LinearLayout>
 

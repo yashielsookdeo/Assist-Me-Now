@@ -1,5 +1,6 @@
 package com.wordapp.test2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.wordapp.test2.Donors.DonorHomeActivity
+import com.wordapp.test2.Recipient.RecipientHomeActivity
 
 class OngoingRequestsActivity : AppCompatActivity() {
 
@@ -24,6 +27,10 @@ class OngoingRequestsActivity : AppCompatActivity() {
             .child("finalizedRequests")
 
         setupRecyclerView()  // Call this method to set up the RecyclerView
+    }
+    fun openRecipientHomeActivity(view: View) {
+        val intent = Intent(this, RecipientHomeActivity::class.java)
+        startActivity(intent)
     }
 
     private fun setupRecyclerView() {

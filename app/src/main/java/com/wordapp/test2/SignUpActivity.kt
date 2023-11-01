@@ -11,6 +11,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.wordapp.test2.Donors.DonorActivity
+import com.wordapp.test2.Donors.DonorHomeActivity
+import com.wordapp.test2.Recipient.RecipientHomeActivity
 import com.wordapp.test2.RecipientActivity
 import com.wordapp.test2.databinding.ActivitySignUpBinding
 
@@ -67,11 +69,11 @@ class SignUpActivity : AppCompatActivity() {
                                     // Check the user's role and start the appropriate activity
                                     when (selectedRole.toLowerCase()) {
                                         "donor" -> {
-                                            val intent = Intent(this, DonorActivity::class.java)
+                                            val intent = Intent(this, DonorHomeActivity::class.java)
                                             startActivity(intent)
                                         }
                                         "recipient" -> {
-                                            val intent = Intent(this, RecipientActivity::class.java)
+                                            val intent = Intent(this, RecipientHomeActivity::class.java)
                                             startActivity(intent)
                                         }
                                         else -> {

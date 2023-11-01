@@ -4,32 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background"
     android:padding="16dp"
-    tools:context=".FinalizeRequestsActivity">
+    android:background="@drawable/background"
+    tools:context=".Admin.AdminCompletedReq">
 
-    <!-- Section Header -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Finalise Requests"
+        android:text="Completed Requests"
+        android:textSize="24dp"
 
-        android:textSize="24sp"
+        android:layout_marginBottom="30dp"
         android:textColor="#000000" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="16dp" />
-
-    <Button
-        android:id="@+id/confirmButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:text="Confirm"
-        android:layout_gravity="center"/>
+        android:layout_marginBottom="30dp"
+        android:clipToPadding="false"
+        android:padding="16dp" />
+
 
 </LinearLayout>

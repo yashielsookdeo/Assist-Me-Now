@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    tools:context=".AboutActivity">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Assist Me Now"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <!-- Description -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Assist Me Now is a community crime awareness group dedicated to enhancing the safety and well-being of disadvantaged communities. Their primary mission revolves around providing essential support in the form of hampers to sustain families facing financial hardships. These hampers typically contain a variety of essential items, including food, toiletries, and other necessities, ensuring that families have access to basic provisions. Beyond the provision of hampers, Assist Me Now actively engages in crime prevention initiatives within the community. They conduct workshops, seminars, and campaigns to raise awareness about crime, safety measures, and community vigilance. By fostering a sense of community and empowering individuals with knowledge, Assist Me Now contributes significantly to the prevention of crimes and the creation of a safer living environment. The organization operates on the principles of compassion, community support, and active participation. They collaborate with local businesses, government agencies, and other non-profit organizations to expand their reach and resources, enabling them to make a more significant impact on the communities they serve. Assist Me Now's work is driven by a deep commitment to social welfare and a belief in the power of collective action. Through their initiatives, they aim to create a supportive network, uplift families in need, and promote a sense of security and unity within the community."
+        android:layout_marginBottom="16dp"
+        android:textSize="15dp"/>
+
+    <!-- Donation Locations -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick Up and Drop Off Location:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="110 Hill Street, Durban"/>
+
+</LinearLayout>

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import com.wordapp.test2.AboutActivity
 import com.wordapp.test2.R
 import com.wordapp.test2.databinding.ActivityFinalizeDonationBinding
 
@@ -24,6 +25,7 @@ class FinalizeDonationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFinalizeDonationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         DonationTracker.getItems { items ->
             val adapter = FinalizeAdapter(items)

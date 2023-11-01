@@ -22,10 +22,10 @@
         android:textSize="18sp"/>
 
     <!-- Arrow Icon Placeholder -->
-    <ImageView
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@mipmap/ic_launcher" />
+<!--    <ImageView-->
+<!--        android:layout_width="24dp"-->
+<!--        android:layout_height="24dp"-->
+<!--        android:src="@mipmap/ic_launcher" />-->
 
 
     <NumberPicker

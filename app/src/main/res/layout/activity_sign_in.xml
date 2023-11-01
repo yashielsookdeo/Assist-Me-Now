@@ -23,7 +23,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEt"
-
+            android:background="@drawable/rounded_corner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Type your Email"
@@ -46,7 +46,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passET"
-
+            android:background="@drawable/rounded_corner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Type Your Password"
@@ -55,12 +55,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:text="Sign In"
         android:textColor="@color/black"
-
+        android:background="@drawable/rounded_corner"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,9 +95,9 @@
 
     <TextView
         android:id="@+id/appName"
-        android:layout_width="237dp"
-        android:layout_height="51dp"
-        android:text="AssistMeNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assist Me Now"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="34sp"

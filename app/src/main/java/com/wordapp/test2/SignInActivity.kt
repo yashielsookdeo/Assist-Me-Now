@@ -6,7 +6,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.wordapp.test2.Admin.AdminHomeActivity
 import com.wordapp.test2.Donors.DonorActivity
+import com.wordapp.test2.Donors.DonorHomeActivity
+import com.wordapp.test2.Recipient.RecipientHomeActivity
 import com.wordapp.test2.databinding.ActivitySignInBinding
 
 class SignInActivity : AppCompatActivity() {
@@ -49,17 +52,25 @@ class SignInActivity : AppCompatActivity() {
                                             // Check the user's role and start the appropriate activity
                                             when (userRole) {
                                                 "Donor" -> {
-                                                    val intent =
-                                                        Intent(this@SignInActivity, DonorActivity::class.java)
+                                                    val intent = Intent(this@SignInActivity, DonorHomeActivity::class.java)
                                                     startActivity(intent)
                                                 }
                                                 "Recipient" -> {
-                                                    val intent =
-                                                        Intent(this@SignInActivity, RecipientActivity::class.java)
+                                                    val intent = Intent(this@SignInActivity, RecipientHomeActivity::class.java)
+                                                    startActivity(intent)
+                                                }
+                                                "Admin" -> {
+                                                    val intent = Intent(this@SignInActivity, AdminHomeActivity::class.java)
                                                     startActivity(intent)
                                                 }
                                                 else -> {
                                                     // Handle other roles or unknown roles
+                                                    Toast.makeText(
+                                                        this@SignInActivity,
+                                                        "Unknown user role: $userRole",
+                                                        Toast.LENGTH_SHORT
+                                                    ).show()
+
                                                     Toast.makeText(
                                                         this@SignInActivity,
                                                         "Unknown user role: $userRole",

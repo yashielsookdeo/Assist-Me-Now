@@ -1,5 +1,6 @@
 package com.wordapp.test2.Donors
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -25,7 +26,14 @@ class OngoingDonationsActivity : AppCompatActivity() {
             .child("finalizedDonations")
 
         setupRecyclerView()
+
     }
+    fun openDonorHomeActivity(view: View) {
+        val intent = Intent(this, DonorHomeActivity::class.java)
+        startActivity(intent)
+    }
+
+
 
     private fun setupRecyclerView() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)

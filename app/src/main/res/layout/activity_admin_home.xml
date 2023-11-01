@@ -1,0 +1,57 @@
+<!-- File: res/layout/activity_admin_home.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background"
+    tools:context=".Admin.AdminHomeActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="300dp"
+        android:text="Home"
+
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Ongoing Requests"
+        android:layout_gravity="center"
+        android:onClick="openAdminOngoingReq"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Ongoing Donations"
+        android:layout_gravity="center"
+        android:onClick="openAdminOngoingDon"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Completed Requests"
+        android:layout_gravity="center"
+        android:onClick="openAdminCompletedReq"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Completed Donations"
+        android:layout_gravity="center"
+        android:onClick="openAdminCompletedDon"
+        android:background="@drawable/rounded_corner"
+        />
+
+</LinearLayout>
