@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assist Me Now</string>
+    <string-array name="spinner_role_items">
+        <item>Donor</item>
+        <item>Recipient</item>
+    </string-array>
+</resources>

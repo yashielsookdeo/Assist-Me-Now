@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginTop="10dp">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/donation_icon" />
+    <TextView
+        android:id="@+id/recycler_fr_item_t"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans"
+        android:layout_marginStart="5dp"
+        android:paddingBottom="10dp"
+        android:text="Test Item"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/recycler_fr_item_b"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_rounded"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="#ffffff"
+        android:text="Remove"/>
+</LinearLayout>

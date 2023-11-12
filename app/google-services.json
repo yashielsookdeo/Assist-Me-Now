@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1022462916048",
+    "firebase_url": "https://assist-me-now-cc32f-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "assist-me-now-cc32f",
+    "storage_bucket": "assist-me-now-cc32f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022462916048:android:385098e2ceeb39cbcaf5d5",
+        "android_client_info": {
+          "package_name": "com.ctrlaltdefeat.assistmenow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8ea2q5v1mZuKV4T7hIFYq3ORdPvl2GBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

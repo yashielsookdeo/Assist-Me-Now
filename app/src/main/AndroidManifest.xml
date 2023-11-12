@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AssistMeNow"
+        tools:targetApi="31">
+        <activity
+            android:name=".recipients.RecipientViewDropOffsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".donors.DonorViewPickUpsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".admin.AdminProcessedRequestsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".admin.AdminProcessedDonationsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".admin.AdminUnprocessedRequestsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".admin.AdminUnprocessedDonationsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".admin.AdminDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".recipients.RecipientRequestsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".recipients.RecipientFinalizeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".recipients.RecipientPickUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".recipients.RecipientAddActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".recipients.RecipientRequestActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".recipients.RecipientDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".donors.DonorDonationsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".donors.DonorFinalizeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".donors.DonorDropOffActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".donors.DonorAddActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".donors.DonorMakeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".donors.DonorDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AssistMeNowCompat" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AssistMeNow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA29WUo0rFVx5ixUeKn9yNYxeGmz2b0S2w" />
+    </application>
+
+</manifest>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AssistMeNow" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.AssistMeNowCompat" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="Theme.AssistMeNow.InputField">
+        <item name="android:background">@drawable/input_rounded</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/nunito_sans</item>
+        <item name="android:textColorHint">#BCBCBC</item>
+    </style>
+</resources>
